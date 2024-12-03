@@ -18,14 +18,14 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 -appelli d'Esame
 -Studenti
 
-## DIPARTIMENTI (OTM)
+## DIPARTIMENTI
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOT NULL)
 -name | VARCHAR(30) - NOT NULL
 -location | VARCHAR(20) - NOT NULL
 -description | TEXT(500) - NULL
 -foundation_year | YEAR - NULL
 
-## CORSI DI LAUREA (MTM)
+## CORSI DI LAUREA
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOT NULL)
 -dipartimenti_id | BIGINT - AUTOINCREMENT - FK (NOT NULL)
 -studenti_id | BIGINT - AUTOINCREMENT - FK (NOT NULL)
@@ -52,7 +52,7 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 -status | TINYINT - NOT NULL
 -date | DATETIME - NOT NULL
 
-## STUDENTI (OTO CORSI LAUREA E OTM APPELLI ESAME) 
+## STUDENTI
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOT NULL)
 -name | VARCHAR(15) - NOT NULL
 -lastname | VARCHAR(30) - NOT NULL
