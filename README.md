@@ -23,13 +23,21 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOTNULL)
 -name | VARCHAR(20) - NOTNULL
 -location | VARCHAR(20) - NOTNULL
+-description | TEXT(500) - NULL
+-foundation_year | YEAR - NULL
 
 ## CORSI DI LAUREA
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOTNULL)
 -dipartimenti_id | BIGINT - AUTOINCREMENT - FK (UNIQUE - NOTNULL)
 -name | VARCHAR(20) - NOTNULL
+-description | TEXT(500) - NULL
 
-## Corsi
+## CORSI
+-id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOTNULL)
+-corsi_di_laurea_id | BIGINT - AUTOINCREMENT - FK (UNIQUE - NOTNULL)
+-name | VARCHAR(20) - NOTNULL
+
+
 ## Insegnanti
 ## appelli d'Esame
 ## Studenti
