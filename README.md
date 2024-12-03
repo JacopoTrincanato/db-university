@@ -18,24 +18,24 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 -appelli d'Esame
 -Studenti
 
-## DIPARTIMENTI
+## DIPARTIMENTI (OTM)
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOT NULL)
 -name | VARCHAR(30) - NOT NULL
 -location | VARCHAR(20) - NOT NULL
 -description | TEXT(500) - NULL
 -foundation_year | YEAR - NULL
 
-## CORSI DI LAUREA
+## CORSI DI LAUREA (MTM)
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOT NULL)
--dipartimenti_id | BIGINT - AUTOINCREMENT - FK (UNIQUE - NOT NULL)
--studenti_id | BIGINT - AUTOINCREMENT - FK (UNIQUE - NOT NULL)
+-dipartimenti_id | BIGINT - AUTOINCREMENT - FK (NOT NULL)
+-studenti_id | BIGINT - AUTOINCREMENT - FK (NOT NULL)
 -name | VARCHAR(30) - NOT NULL
 -description | TEXT(500) - NULL
 
-## CORSI
+## CORSI(MTM)
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOT NULL)
--corsi_di_laurea_id | BIGINT - AUTOINCREMENT - FK (UNIQUE - NOTNULL)
--insegnanti_id | BIGINT - AUTOINCREMENT - FK (UNIQUE - NOT NULL)
+-corsi_di_laurea_id | BIGINT - AUTOINCREMENT - FK (NOTNULL)
+-insegnanti_id | BIGINT - AUTOINCREMENT - FK (NOT NULL)
 -name | VARCHAR(30) - NOT NULL
 
 ## INSEGNANTI
@@ -44,13 +44,15 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 -lastname | VARCHAR(30) - NOT NULL
 -email | VARCHAR(30) - NULL
 
-## APPELLI D'ESAME
+## APPELLI D'ESAME (MTM)
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOT NULL)
--corsi_id | BIGINT - AUTOINCREMENT - FK (UNIQUE - NOT NULL)
--studenti_id | BIGINT - AUTOINCREMENT - FK (UNIQUE - NOT NULL)
--mark_status | TINYINT - DEFAULT (0) - NOT NULL
+-corsi_id | BIGINT - AUTOINCREMENT - FK (NOT NULL)
+-studenti_id | BIGINT - AUTOINCREMENT - FK (NOT NULL)
+-mark | TINYINT - DEFAULT (0) - NOT NULL
+-status | TINYINT - NOT NULL
+date | DATETIME - NOT NULL
 
-## STUDENTI
+## STUDENTI (OTO CORSI LAUREA E OTM APPELLI ESAME) 
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOT NULL)
 -name | VARCHAR(15) - NOT NULL
 -lastname | VARCHAR(30) - NOT NULL
