@@ -17,5 +17,16 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 -Insegnanti
 -appelli d'Esame
 -Studenti
--Voti
+-?Voti
 
+## DIPARTIMENTI
+-id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOTNULL)
+-name | VARCHAR(20) - NOTNULL
+-location | VARCHAR(20) - NOTNULL
+
+## Corsi di Laurea
+## Corsi
+## Insegnanti
+## appelli d'Esame
+## Studenti
+## Voti
