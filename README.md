@@ -32,7 +32,7 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 -name | VARCHAR(30) - NOT NULL
 -description | TEXT(500) - NULL
 
-## CORSI(MTM)
+## CORSI
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOT NULL)
 -corsi_di_laurea_id | BIGINT - AUTOINCREMENT - FK (NOTNULL)
 -insegnanti_id | BIGINT - AUTOINCREMENT - FK (NOT NULL)
@@ -44,7 +44,7 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 -lastname | VARCHAR(30) - NOT NULL
 -email | VARCHAR(30) - UNIQUE - NULL
 
-## APPELLI D'ESAME (MTM)
+## APPELLI D'ESAME
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOT NULL)
 -corsi_id | BIGINT - AUTOINCREMENT - FK (NOT NULL)
 -studenti_id | BIGINT - AUTOINCREMENT - FK (NOT NULL)
