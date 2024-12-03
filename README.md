@@ -28,7 +28,6 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 ## CORSI DI LAUREA
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOT NULL)
 -dipartimenti_id | BIGINT - AUTOINCREMENT - FK (NOT NULL)
--studenti_id | BIGINT - AUTOINCREMENT - FK (NOT NULL)
 -name | VARCHAR(30) - NOT NULL
 -description | TEXT(500) - NULL
 
@@ -54,6 +53,7 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 
 ## STUDENTI
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOT NULL)
+-corsi_di_laurea_id | BIGINT - AUTOINCREMENT - FK (NOT NULL)
 -name | VARCHAR(15) - NOT NULL
 -lastname | VARCHAR(30) - NOT NULL
 -email | VARCHAR(30) - UNIQUE - NULL
