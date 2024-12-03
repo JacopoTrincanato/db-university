@@ -42,7 +42,7 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOTNULL)
 -name | VARCHAR(15) - NOT NULL
 -lastname | VARCHAR(30) - NOT NULL
--email | VARCHAR(30) - NULL
+-email | VARCHAR(30) - UNIQUE - NULL
 
 ## APPELLI D'ESAME (MTM)
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOT NULL)
@@ -50,10 +50,10 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 -studenti_id | BIGINT - AUTOINCREMENT - FK (NOT NULL)
 -mark | TINYINT - DEFAULT (0) - NOT NULL
 -status | TINYINT - NOT NULL
-date | DATETIME - NOT NULL
+-date | DATETIME - NOT NULL
 
 ## STUDENTI (OTO CORSI LAUREA E OTM APPELLI ESAME) 
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOT NULL)
 -name | VARCHAR(15) - NOT NULL
 -lastname | VARCHAR(30) - NOT NULL
--email | VARCHAR(30) - NULL
+-email | VARCHAR(30) - UNIQUE - NULL
