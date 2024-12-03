@@ -17,7 +17,6 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 -Insegnanti
 -appelli d'Esame
 -Studenti
--?Voti
 
 ## DIPARTIMENTI
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOT NULL)
@@ -29,14 +28,15 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 ## CORSI DI LAUREA
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOT NULL)
 -dipartimenti_id | BIGINT - AUTOINCREMENT - FK (UNIQUE - NOT NULL)
--name | VARCHAR(20) - NOT NULL
+-studenti_id | BIGINT - AUTOINCREMENT - FK (UNIQUE - NOT NULL)
+-name | VARCHAR(30) - NOT NULL
 -description | TEXT(500) - NULL
 
 ## CORSI
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOT NULL)
 -corsi_di_laurea_id | BIGINT - AUTOINCREMENT - FK (UNIQUE - NOTNULL)
 -insegnanti_id | BIGINT - AUTOINCREMENT - FK (UNIQUE - NOT NULL)
--name | VARCHAR(20) - NOT NULL
+-name | VARCHAR(30) - NOT NULL
 
 ## INSEGNANTI
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOTNULL)
@@ -47,7 +47,11 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 ## APPELLI D'ESAME
 -id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOT NULL)
 -corsi_id | BIGINT - AUTOINCREMENT - FK (UNIQUE - NOT NULL)
+-studenti_id | BIGINT - AUTOINCREMENT - FK (UNIQUE - NOT NULL)
 -mark_status | TINYINT - DEFAULT (0) - NOT NULL
 
-## Studenti
-## Voti
+## STUDENTI
+-id | BIGINT - AUTOINCREMENT - PK (UNIQUE - NOT NULL)
+-name | VARCHAR(15) - NOT NULL
+-lastname | VARCHAR(30) - NOT NULL
+-email | VARCHAR(30) - NULL
