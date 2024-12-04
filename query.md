@@ -44,4 +44,8 @@ INSERT INTO students (id, degree_id, name, surname, date_of_birth, fiscal_code, 
 VALUES (6000, 14, 'Jacopo', 'Trincanato', '2001-12-14', 'TRIATB76D70W416S', '2024-08-28', 621032, 'trincanatoj@gmail.com');
 
 ## QUERY 10 Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
+UPDATE teachers
+SET office_number = 126
+WHERE surname =  'Rizzo';
+
 ## QUERY 11 Eliminare dalla tabella studenti il record creato precedentemente al punto 9
