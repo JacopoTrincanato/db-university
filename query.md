@@ -23,9 +23,13 @@ AND year = 1;
 SELECT *
 FROM exams
 WHERE hour > '14:00:00'
-AND date = '2020-06-20'
+AND date = '2020-06-20';
 
 ## QUERY 6 Selezionare tutti i corsi di laurea magistrale (38)
+SELECT *
+FROM degrees
+WHERE level = 'magistrale';
+
 ## QUERY 7 Da quanti dipartimenti è composta l'università? (12)
 ## QUERY 8 Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 ## QUERY 9 Inserire nella tabella degli studenti un nuovo record con i propri dati (per il campo degree_id, inserire un valore casuale)
