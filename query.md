@@ -1,5 +1,5 @@
 ## QUERY 1 Selezionare tutti gli studenti nati nel 1990 (160)
-SELECT name, date_of_birth
+SELECT *
 FROM students
 WHERE YEAR(date_of_birth) = 1990;
 
@@ -20,6 +20,11 @@ WHERE period = 'I semestre'
 AND year = 1;
 
 ## QUERY 5 Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del 20/06/2020 (21)
+SELECT *
+FROM exams
+WHERE hour > '14:00:00'
+AND date = '2020-06-20'
+
 ## QUERY 6 Selezionare tutti i corsi di laurea magistrale (38)
 ## QUERY 7 Da quanti dipartimenti è composta l'università? (12)
 ## QUERY 8 Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
