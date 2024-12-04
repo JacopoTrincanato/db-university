@@ -41,7 +41,7 @@ WHERE phone IS NULL;
 
 ## QUERY 9 Inserire nella tabella degli studenti un nuovo record con i propri dati (per il campo degree_id, inserire un valore casuale)
 INSERT INTO students (id, degree_id, name, surname, date_of_birth, fiscal_code, enrolment_date, registration_number, email)
-VALUES (1001, 14, Jacopo, Trincanato, 2001-12-14, TRIATB76D70W416S, 2024-08-28, 621032, trincanatoj@gmail.com);
+VALUES (6000, 14, 'Jacopo', 'Trincanato', '2001-12-14', 'TRIATB76D70W416S', '2024-08-28', 621032, 'trincanatoj@gmail.com');
 
 ## QUERY 10 Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
 ## QUERY 11 Eliminare dalla tabella studenti il record creato precedentemente al punto 9
