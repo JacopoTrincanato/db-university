@@ -45,8 +45,18 @@ WHERE degrees.level = 'magistrale'
 AND departments.name = 'Dipartimento di Neuroscienze'
 
 ## Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)
+SELECT DISTINCT teachers.name, teachers.surname, course_id, courses.name
+FROM teachers
+JOIN course_teacher ON course_teacher.teacher_id = teachers.id
+JOIN courses ON course_teacher.course_id = courses.id
+WHERE teachers.id = 44
 
 ## Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e nome
+SELECT students.name, students.surname, department_id, degree_id, degrees.name
+FROM students
+JOIN degrees ON students.degree_id = degrees.id
+JOIN departments ON degrees.department_id = departments.id
+ORDER BY students.surname 
 
 ## Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
 
