@@ -13,11 +13,14 @@ FROM teachers
 GROUP BY office_address 
 
 ## Calcolare la media dei voti di ogni appello d'esame
-SELECT AVG(vote) AS 'average-mark',  exam_id
+SELECT AVG(vote) AS 'average_mark',  exam_id
 FROM exam_student
 GROUP BY exam_id 
 
 ## Contare quanti corsi di laurea ci sono per ogni dipartimento
+SELECT COUNT('id') AS 'total_courses',  department_id
+FROM degrees
+GROUP BY department_id 
 
 # Joins:
 
