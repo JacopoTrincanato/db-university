@@ -11,13 +11,13 @@ WHERE cfu > 10
 ## QUERY 3 Selezionare tutti gli studenti che hanno più di 30 anni
 SELECT *
 FROM students
-WHERE YEAR(current_date()) - YEAR(date_of_birth) > 30;
+WHERE YEAR(current_date()) - YEAR(date_of_birth) > 30; / TIMESTAMPDIFF(YEAR, 'date_of_birth', CURDATE()) > 30
 
 ## QUERY 4 Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
 SELECT *
-FROM courses
-WHERE period = 'I semestre'
-AND year = 1;
+FROM 'courses'
+WHERE 'period' = 'I semestre'
+AND 'year' = 1;
 
 ## QUERY 5 Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del 20/06/2020 (21)
 SELECT *
@@ -31,7 +31,7 @@ FROM degrees
 WHERE level = 'magistrale';
 
 ## QUERY 7 Da quanti dipartimenti è composta l'università? (12)
-SELECT *
+SELECT * / COUNT ('id') as departments
 FROM departments;
 
 ## QUERY 8 Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
